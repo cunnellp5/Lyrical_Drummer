@@ -1,0 +1,70 @@
+body {
+    /*background-image: url("http://i.giphy.com/FWCDa8PhI7GKc.gif");*/
+    background-color: #cccccc;
+
+    background-size: contain;
+    opacity: inherit;
+}
+
+#grad {
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, white, gray); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, white, gray); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, white, gray); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, white, gray); /* Standard syntax */
+}
+
+.three {
+  display: fix;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.three {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.circle {
+  padding: 1em;
+  border: 1px solid black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+/* change this to mess with grid*/
+.col-xs-4,
+.col-md-4{
+   display: flex;
+   justify-content: center;
+ }
+
+.stock {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+div {
+  /*border: 1px solid black;*/
+}
+
+img, p {
+  margin: 5px;
+}
+
+textarea {
+  margin: 1em;
+}
+
+.space {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em;
+}
+
+/*header {
+  padding: 2em;
+}*/
