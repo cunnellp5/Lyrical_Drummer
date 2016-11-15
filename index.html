@@ -8,32 +8,37 @@
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 </head>
 
-<body id="grad" class="container">
+<body id="grad">
 
     <header>
-        <h1 class="text-center">Philthy Drums and lyrics, coming soon!...</h1>
-        <!-- <div class="space">
-          <button class="btn btn-default" type="submit">Type a word to rhyme:</button>
-          <button class="btn btn-default" type="submit">HipsterJesus Ipsum:</button>
-          <button class="btn btn-default" type="submit">Dr. Hard:</button>
-        </div> -->
-        <br>
-        <br>
-        <br>
-        <p class="text-center">
-          Press your keyboard buttons below! (R and T will play on...)
-        </p>
+        <nav class="navbar navbar-inverse">
+            <h1 class="text-center">Inspiration, coming soon!...</h1>
+        </nav>
+
+        <section class="row">
+            <div class="col-xs-6 col-xs-offset-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Info:</h3>
+                    </div>
+                    <div class="panel-body">
+                        Smash your keyboard with the coresponding letters, and try to keep a beat. You may also use the keywords below for rhymes.
+                    </div>
+                </div>
+            </div>
+        </section>
     </header>
 
     <section class="row">
-        <div class="col-xs-4" m>
+        <div class="col-xs-4 container">
             <div class="stock">
+                <!-- spacer for the grid -->
             </div>
         </div>
         <div class="col-xs-4">
             <div class="three">
                 <div class="circle">
-                    <button class="vox" accesskey="r">R</button>
+                    <button class="vox color" accesskey="r">R</button>
                 </div>
                 <div class="circle">
                     <button class="tom_hi">F</button>
@@ -44,7 +49,7 @@
             </div>
             <div class="three">
                 <div class="circle">
-                    <button class="guitar">T</button>
+                    <button class="guitar color">T</button>
                 </div>
                 <div class="circle">
                     <button class="tom">G</button>
@@ -53,7 +58,7 @@
                     <button class="hat">B</button>
                 </div>
                 <div class="stop">
-                  <button id="pause" type="button" name="button">STOP</button>
+                    <button class="glyphicon glyphicon-stop" id="pause" type="button" name="button"></button>
                 </div>
             </div>
             <div class="three">
@@ -71,37 +76,46 @@
 
         <div class="col-xs-4">
             <div class="stock">
-              <!-- PUT SHIT HERE -->
+                <!-- spacer for the grid -->
             </div>
         </div>
     </section>
-<!-- middle chunk -->
-<h2 class="text-center">Lyrics Here!</h2>
+
+    <!-- middle chunk -->
     <section class="row">
-        <div class="col-xs-12 text-center" id = "content">
-          <!-- <textarea name="name" rows="8" cols="25"></textarea> -->
-          <div class="btn">
-                      <a href="#" class="btn">RANDOM!</a>
-          </div>
+        <div class="col-xs-6 col-xs-offset-3">
+            <div class="shorten">
+                <h2 class="text-center alert alert-info">Try to rhyme the words below!</h2>
+            </div>
         </div>
     </section>
-
-    <h2 class="text-center">Suggestion Patterns!</h2>
-        <section class="row">
-            <div class="col-xs-12 text-center" m>
-                  <textarea id = "content3" name="name" rows="8" cols="40"></textarea>
+    <section class="row">
+        <div class="col-xs-12 text-center" id="content">
+            <div class="btn">
+                <p>
+                    *Random Words*
+                </p>
             </div>
-            <div class="col-xs-12 text-center">
-              <textarea id = "content4" name="name" rows="8" cols="40"></textarea>
+        </div>
+        <div class="col-xs-12 text-center">
+            <div class="btn">
+                <button id='next' class='glyphicon glyphicon-step-forward' type="button" name="button"></button>
             </div>
-            <div class="col-xs-12 text-center">
-                  <textarea id = "content5" name="name" rows="8" cols="40"></textarea>
-            </div>
-        </section>
-
-
+        </div>
+    </section>
+    <hr>
+    <h3 class="text-center">Suggestion Patterns:</h3>
+    <section class="row">
+        <div class="col-xs-12 text-center" m>
+            <textarea id="content3" name="name" rows="8" cols="40"></textarea>
+        </div>
+    </section>
+    <footer>
+        <nav class="navbar navbar-inverse">
+            <h4 class="text-center">Thanks for playing with my drums</h4>
+        </nav>
+    </footer>
     <script src=app.js></script>
-
 </body>
 
 </html>
