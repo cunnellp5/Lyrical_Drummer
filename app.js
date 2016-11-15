@@ -36,19 +36,19 @@ var sounds = [{
     keycode: "82"
 }];
 //******************************************************************************
-$(document).ready(function(){
-  var audioElement = document.createElement('audio');
-  for (var i = 0; i < sounds.length; i++) {
-    audioElement.setAttribute('src', this.sounds[i].src);
-    window.addEventListener("keydown", checkKeyPressed, false);
-    function checkKeyPressed(e) {
-        if (e.keyCode == this.sounds[i].id) {
-            audioElement.play();
-            audioElement.currentTime = 0;
-        }
-    }
-  }
-})
+// $(document).ready(function(){
+//   var audioElement = document.createElement('audio');
+//   for (var i = 0; i < sounds.length; i++) {
+//     audioElement.setAttribute('src', this.sounds[i].src);
+//     window.addEventListener("keydown", checkKeyPressed, false);
+//     function checkKeyPressed(e) {
+//         if (e.keyCode == this.sounds[i].id) {
+//             audioElement.play();
+//             audioElement.currentTime = 0;
+//         }
+//     }
+//   }
+// })
 
 
 $(document).ready(function() {
@@ -212,18 +212,38 @@ $(document).ready(function() {
         });
     });
 });
-//******************************************************************************
-
+//******************random words generated below********************************
 
 $(document).ready(function() {
     $.getJSON('http://hipsterjesus.com/api/', function(data) {
 
-        var rand = Math.floor(Math.random() * data.text.split(" ").length)
-        var arr = data.text.split(" ")
+        var arr = data.text.replace(/\<p\>|\<\/p\>|,|\./g, "").split(" ")
+        var rand = Math.floor(Math.random() * arr.length)
 
+        window.addEventListener("keydown", checkKeyPressed, false);
+
+        function checkKeyPressed(e) {
+            if (e.keyCode == "67") {
+                var randomWord = getRandomWord(arr)
+                $('#content').html(randomWord);
+                console.log(randomWord);
+            }
+        }
         $("#next").click(function() {
-            event.preventDefault();
-            $('#content').html(arr[rand]);
+            // event.preventDefault();
+            var randomWord = getRandomWord(arr)
+            $('#content').html(randomWord);
+            console.log(randomWord);
         });
     });
 });
+function getRandomWord(words) {
+    var rand = Math.floor(Math.random() * words.length)
+
+    if (words[rand].trim() !== "") {
+        return words[rand];
+    } else {
+        return getRandomWord(words)
+    }
+}
+//******************rhyme the given word from above*****************************
