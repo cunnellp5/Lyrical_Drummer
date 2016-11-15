@@ -121,7 +121,9 @@ button:active:after {
   background-color: red;
 }
 
-.shorten{
-  /*width: 80vw;*/
-  /*justify-content: center;*/
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 50%;
+    margin: auto;
+    /*padding: 1em;*/
 }
