@@ -17,15 +17,15 @@ body {
 }
 
 .three {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   padding: 5px;
 }
 
 .circle {
-  padding: 1em;
-  border: 1px solid black;
+  /*padding: 1em;*/
+  /*border: 1px solid black;*/
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   border-radius: 10px;
 }
 /* change this to mess with grid*/
@@ -53,4 +53,49 @@ textarea {
   display: flex;
   justify-content: space-between;
   margin: 2em;
+}
+
+
+button {
+    box-shadow: 2px 2px 2px 2px;
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+#content {
+  font-size: 24px;
+}
+#pause {
+  background-color: red;
 }

@@ -1,34 +1,54 @@
-$(document).ready(function() {
 
     var sounds = [{
         id: "snare",
-        src: "audio/snare.wav"
+        src: "audio/snare.wav",
+        keycode: "78"
     }, {
         id: "kick",
-        src: "audio/808.wav"
+        src: "audio/808.wav",
+        keycode: "86"
     }, {
         id: "hat",
-        src: "audio/hat.mp3"
+        src: "audio/hat.mp3",
+        keycode: "66"
     }, {
         id: "clap",
-        src: "audio/clap.wav"
+        src: "audio/clap.wav",
+        keycode: "72"
     }, {
         id: "crunch",
-        src: "audio/crunch.wav"
+        src: "audio/crunch.wav",
+        keycode: "89"
     }, {
         id: "guitar",
-        src: "audio/guitarLoop.wav"
+        src: "audio/guitarLoop.wav",
+        keycode: "84"
     }, {
         id: "tom_hi",
-        src: "audio/tom_hi.wav"
+        src: "audio/tom_hi.wav",
+        keycode: "70"
     }, {
         id: "tom",
-        src: "audio/tom.wav"
+        src: "audio/tom.wav",
+        keycode: "71"
     }, {
         id: "vox.wav",
-        src: "audio/vox.wav"
+        src: "audio/vox.wav",
+        keycode: "82"
     }];
 //******************************************************************************
+// $(document).ready(function(){
+//   var audioElement = document.createElement('audio');
+//
+//   for (var i = 0; i < sounds.length; i++) {
+//     sounds[i]
+//
+//
+//   }
+// })
+
+
+$(document).ready(function() {
     var audioElement = document.createElement('audio');
     audioElement.setAttribute('src', sounds[8].src);
     window.addEventListener("keydown", checkKeyPressed, false);
@@ -180,6 +200,17 @@ $(document).ready(function() {
         });
     });
 });
-
-
 //******************************************************************************
+
+
+$(document).ready(function() {
+$.getJSON('http://hipsterjesus.com/api/', function(data) {
+
+    var rand = Math.floor(Math.random() * data.text.split(" ").length)
+    var arr = data.text.split(" ")
+    console.log(data.text);
+    console.log(rand)
+    $('#content').html(arr[rand]);
+
+});
+});
