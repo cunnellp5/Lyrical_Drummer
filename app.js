@@ -51,7 +51,6 @@ var sounds = [{
 // })
 
 
-
 $(document).ready(function() {
     var audioElement = document.createElement('audio');
     audioElement.setAttribute('src', sounds[8].src);
@@ -61,6 +60,8 @@ $(document).ready(function() {
         if (e.keyCode == "82") {
             audioElement.play();
             audioElement.currentTime = 0;
+        } else if (e.keyCode == "84") {
+          audioElement.pause();
         }
     }
     $('.vox').click(function() {
@@ -165,6 +166,8 @@ $(document).ready(function() {
             if (e.keyCode == "84") {
                 audioElement.play();
                 audioElement.currentTime = 0;
+            } else if (e.keyCode == "82") {
+              audioElement.pause();
             }
         }
         $('.guitar').click(function() {
