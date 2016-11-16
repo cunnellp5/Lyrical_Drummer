@@ -50,11 +50,7 @@ var sounds = [{
 //   }
 // })
 
-function checkKeyPressed(stop) {
-    if (stop.keyCode == "69") {
-        audioElement.pause();
-    }
-}
+
 
 $(document).ready(function() {
     var audioElement = document.createElement('audio');
