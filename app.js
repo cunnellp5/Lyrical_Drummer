@@ -1,39 +1,39 @@
 var sounds = [{
-    id: "snare",
-    src: "audio/snare.wav",
-    keycode: "78"
+  id: 'snare',
+  src: 'audio/snare.wav',
+  keycode: '78'
 }, {
-    id: "kick",
-    src: "audio/808.wav",
-    keycode: "86"
+  id: 'kick',
+  src: 'audio/808.wav',
+  keycode: '86'
 }, {
-    id: "hat",
-    src: "audio/hat.mp3",
-    keycode: "66"
+  id: 'hat',
+  src: 'audio/hat.mp3',
+  keycode: '66'
 }, {
-    id: "clap",
-    src: "audio/clap.wav",
-    keycode: "72"
+  id: 'clap',
+  src: 'audio/clap.wav',
+  keycode: '72'
 }, {
-    id: "crunch",
-    src: "audio/crunch.wav",
-    keycode: "89"
+  id: 'crunch',
+  src: 'audio/crunch.wav',
+  keycode: '89'
 }, {
-    id: "guitar",
-    src: "audio/guitarLoop.wav",
-    keycode: "84"
+  id: 'guitar',
+  src: 'audio/guitarLoop.wav',
+  keycode: '84'
 }, {
-    id: "tom_hi",
-    src: "audio/tom_hi.wav",
-    keycode: "70"
+  id: 'tom_hi',
+  src: 'audio/tom_hi.wav',
+  keycode: '70'
 }, {
-    id: "tom",
-    src: "audio/tom.wav",
-    keycode: "71"
+  id: 'tom',
+  src: 'audio/tom.wav',
+  keycode: '71'
 }, {
-    id: "vox.wav",
-    src: "audio/vox.wav",
-    keycode: "82"
+  id: 'vox.wav',
+  src: 'audio/vox.wav',
+  keycode: '82'
 }];
 //******************************************************************************
 // $(document).ready(function(){
@@ -50,6 +50,11 @@ var sounds = [{
 //   }
 // })
 
+function checkKeyPressed(stop) {
+    if (stop.keyCode == "69") {
+        audioElement.pause();
+    }
+}
 
 $(document).ready(function() {
     var audioElement = document.createElement('audio');
@@ -81,7 +86,7 @@ $(document).ready(function() {
                 audioElement.currentTime = 0;
             }
         }
-        $('.808').click(function() {
+        $('.kick').click(function() {
             audioElement.play();
             audioElement.currentTime = 0;
         });
@@ -226,17 +231,43 @@ $(document).ready(function() {
             if (e.keyCode == "67") {
                 var randomWord = getRandomWord(arr)
                 $('#content').html(randomWord);
-                console.log(randomWord);
+
             }
         }
-        $("#next").click(function() {
-            // event.preventDefault();
+        $("#next").click(function(event) {
+            event.preventDefault();
             var randomWord = getRandomWord(arr)
+            $('#content').html('');
             $('#content').html(randomWord);
-            console.log(randomWord);
+
+
+            $("#next2").click(function() {
+                var rhyme = ('http://rhymebrain.com/talk?function=getRhymes&word=' + randomWord)
+                console.log(rhyme);
+                $.get(rhyme, function(word){
+                    $('#content2').html('');
+                  for (var i = 0; i < 5; i++) {
+                    $('#content2').append(word[i].word + " " + "<br>");
+                  }
+                    $('#content3').html('');
+                  for (var i = 5; i < 10; i++) {
+                    $('#content3').append(word[i].word + " " + "<br>");
+                  }
+                    $('#content4').html('');
+                  for (var i = 10; i < 15; i++) {
+                    $('#content4').append(word[i].word + " " + "<br>");
+                  }
+                    $('#content5').html('');
+                  for (var i = 15; i < 20; i++) {
+
+                    $('#content5').append(word[i].word + " " + "<br>");
+                  }
+                })
+            })
         });
     });
 });
+
 function getRandomWord(words) {
     var rand = Math.floor(Math.random() * words.length)
 
@@ -245,5 +276,6 @@ function getRandomWord(words) {
     } else {
         return getRandomWord(words)
     }
+
 }
 //******************rhyme the given word from above*****************************

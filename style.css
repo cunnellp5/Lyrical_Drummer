@@ -1,9 +1,10 @@
-/*body {
-    background-color: white;
-    background-size: cover;
-    opacity: inherit;
-}*/
-
+body {
+padding-top: 1.5em;
+width: 100%;
+}
+.container2 {
+  /*border: 1px solid black;*/
+}
 h1 {
   color: white;
   padding: 1em;
@@ -17,13 +18,12 @@ p{
 
 }
 .color {
-  background-color: #42f4a7;
+  background-color: #00ff00;
+  background-blend-mode: saturation;
 }
 .row {
   margin-top: 1em;
 }
-
-
 
 img, p {
   margin: 5px;
@@ -46,12 +46,12 @@ button {
   border-radius: 10px;
     box-shadow: 2px 2px 2px 2px;
     position: relative;
-    background-color: #4CAF50;
+    background-color: #00ff00;
     border: none;
-    font-size: 28px;
+    font-size: 24px;
     color: #FFFFFF;
     padding: 20px;
-    width: 15vw;
+    width: 12vw;
     text-align: center;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
@@ -80,13 +80,19 @@ button:active:after {
     opacity: 1;
     transition: 0s
 }
-
+#next,
+#next2 {
+  font-size: 12;
+  padding: .25em;
+  background-color: purple;
+  width: 20vw;
+}
 #content {
   font-size: 24px;
-
 }
 #pause {
   background-color: red;
+  border-radius: 100%;
 }
 
 .carousel-inner > .item > img,
@@ -94,4 +100,50 @@ button:active:after {
     /*width: 50%;*/
     margin: auto;
     /*padding: 1em;*/
+}
+
+.vox {
+  background-image: url(png/microphone.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.tom_hi {
+  background-image: url(png/music-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.tom {
+  background-image: url(png/music-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.kick {
+    background-image: url(png/music-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.guitar {
+  background-image: url(png/electric-guitar.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hat {
+  background-image: url(png/music-4.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.crunch {
+  background-image: url(png/music-5.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.clap {
+  background-image: url(png/clapping-hands.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.snare {
+  background-image: url(png/music-3.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
