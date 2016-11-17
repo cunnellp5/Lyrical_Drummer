@@ -77,7 +77,7 @@ console.log(sound);
 
 $(document).ready(function() {
   var currentRandomWord = ''
-    $.getJSON('http://hipsterjesus.com/api/', function(data) {
+    $.getJSON('https://hipsterjesus.com/api/', function(data) {
         var arr = data.text.replace(/\<p\>|\<\/p\>|,|\./g, "").split(" ")
         var rand = Math.floor(Math.random() * arr.length)
         window.addEventListener("keydown", checkKeyPressed, false);
@@ -96,7 +96,7 @@ $(document).ready(function() {
             currentRandomWord = randomWord;
         });
         $("#next2").click(function() {
-            var rhyme = ('http://rhymebrain.com/talk?function=getRhymes&word=' + currentRandomWord)
+            var rhyme = ('https://rhymebrain.com/talk?function=getRhymes&word=' + currentRandomWord)
             console.log(rhyme);
             $.get(rhyme, function(word){
                 $('#content2').html('');
