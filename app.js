@@ -55,7 +55,6 @@ $(document).ready(function(){
     });
 })
 
-//will my commits show??????
 
 //
 //   $(document).ready(function() {
