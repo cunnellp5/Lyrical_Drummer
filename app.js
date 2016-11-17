@@ -41,7 +41,7 @@ var sounds = [{
 
 $(document).ready(function(){
   sounds.forEach(function(sound){
-
+console.log(sound);
     var audioElement = document.createElement('audio');
     audioElement.setAttribute('src', sound.src);
     audioElement.setAttribute('keycode', sound.keycode);
@@ -76,18 +76,16 @@ $(document).ready(function(){
 //******************random words generated below********************************
 
 $(document).ready(function() {
+  var currentRandomWord = ''
     $.getJSON('http://hipsterjesus.com/api/', function(data) {
-
         var arr = data.text.replace(/\<p\>|\<\/p\>|,|\./g, "").split(" ")
         var rand = Math.floor(Math.random() * arr.length)
-
         window.addEventListener("keydown", checkKeyPressed, false);
-
         function checkKeyPressed(key) {
             if (key.keyCode == "67") {
                 var randomWord = getRandomWord(arr)
                 $('#content').html(randomWord);
-
+                currentRandomWord = randomWord;
             }
         }
         $("#next").click(function(event) {
@@ -95,35 +93,32 @@ $(document).ready(function() {
             var randomWord = getRandomWord(arr)
             $('#content').html('');
             $('#content').html(randomWord);
-
-
-            $("#next2").click(function() {
-                var rhyme = ('http://rhymebrain.com/talk?function=getRhymes&word=' + randomWord)
-                console.log(rhyme);
-                $.get(rhyme, function(word){
-                    $('#content2').html('');
-                  for (var i = 0; i < 5; i++) {
-                    $('#content2').append(word[i].word + " " + "<br>");
-                  }
-                    $('#content3').html('');
-                  for (var i = 5; i < 10; i++) {
-                    $('#content3').append(word[i].word + " " + "<br>");
-                  }
-                    $('#content4').html('');
-                  for (var i = 10; i < 15; i++) {
-                    $('#content4').append(word[i].word + " " + "<br>");
-                  }
-                    $('#content5').html('');
-                  for (var i = 15; i < 20; i++) {
-
-                    $('#content5').append(word[i].word + " " + "<br>");
-                  }
-                })
-            })
+            currentRandomWord = randomWord;
         });
+        $("#next2").click(function() {
+            var rhyme = ('http://rhymebrain.com/talk?function=getRhymes&word=' + currentRandomWord)
+            console.log(rhyme);
+            $.get(rhyme, function(word){
+                $('#content2').html('');
+              for (var i = 0; i < 5; i++) {
+                $('#content2').append(word[i].word + " " + "<br>");
+              }
+                $('#content3').html('');
+              for (var i = 5; i < 10; i++) {
+                $('#content3').append(word[i].word + " " + "<br>");
+              }
+                $('#content4').html('');
+              for (var i = 10; i < 15; i++) {
+                $('#content4').append(word[i].word + " " + "<br>");
+              }
+                $('#content5').html('');
+              for (var i = 15; i < 20; i++) {
+                $('#content5').append(word[i].word + " " + "<br>");
+              }
+            })
+        })
     });
 });
-
 function getRandomWord(words) {
     var rand = Math.floor(Math.random() * words.length)
 
@@ -132,10 +127,8 @@ function getRandomWord(words) {
     } else {
         return getRandomWord(words)
     }
-
 }
 //******************rhyme the given word from above*****************************
-
 timer = setInterval( function()
 {
 	var randomColor = 'rgb(' +
@@ -144,7 +137,6 @@ timer = setInterval( function()
 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
 	$('.snare').css('backgroundColor', randomColor);
 }, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
-
 timer = setInterval( function()
 {
 	var randomColor = 'rgb(' +
@@ -153,7 +145,6 @@ timer = setInterval( function()
 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
 	$('.kick').css('backgroundColor', randomColor);
 }, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
-
 timer = setInterval( function()
 {
 	var randomColor = 'rgb(' +
@@ -162,7 +153,6 @@ timer = setInterval( function()
 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
 	$('.hat').css('backgroundColor', randomColor);
 }, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
-
 timer = setInterval( function()
 {
 	var randomColor = 'rgb(' +
@@ -171,7 +161,6 @@ timer = setInterval( function()
 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
 	$('.vox').css('backgroundColor', randomColor);
 }, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
-
 timer = setInterval( function()
 {
 	var randomColor = 'rgb(' +

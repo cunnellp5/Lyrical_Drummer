@@ -38,6 +38,7 @@ textarea {
   width: 100%;
 }
 button {
+
     border-radius: 10px;
     font-size: 24px;
     background-color: #00ff00;
@@ -45,6 +46,9 @@ button {
     color: #FFFFFF;
     padding: 20px;
     width: 12vw;
+}
+button:focus{
+  outline:0;
 }
 .drum{
   background-color: 	rgb(255,255,255);
@@ -54,11 +58,17 @@ button {
   -o-transition: 		background-color 200 ease-in-out;  /* Opera 2005+ */
   transition: 		background-colo 200 ease-in-out;
 }
+.btn-primary {
+  box-shadow: 0px 5px 10px black;
+}
+#myCarousel {
+  box-shadow: 0px 2px 10px black;
+}
 .drum {
     margin-bottom: .5em;
     border-radius: 10px;
     text-shadow:5px 5px 10px black;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 0px 5px 10px black;
     position: relative;
     background-color: #00ff00;
     border: none;
@@ -81,10 +91,11 @@ button {
     position: absolute;
     padding-top: 200%;
     padding-left: 250%;
-    margin-left: -20px!important;
+    margin-left: -30px!important;
     margin-top: -120%;
     opacity: 0;
-    transition: all 0.3s
+    transition: all .5s;
+    border-radius: 200%;
 }
 .drum:active:after {
     padding: 0;
@@ -101,7 +112,7 @@ button {
   padding: .25em;
   background-color: purple;
   width: 20vw;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 0px 2px 5px black;
 }
 #content {
   font-size: 24px;
@@ -111,7 +122,7 @@ button {
   height: 3em;
   background-color: red;
   border-radius: 100%;
-  box-shadow: 5px 5px 10px black;
+  box-shadow: 0px 5px 10px black;
 }
 
 .carousel-inner > .item > img,
