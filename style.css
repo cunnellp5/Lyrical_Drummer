@@ -40,10 +40,18 @@ textarea {
 .panel {
   width: 100%;
 }
-
 button {
-  margin-bottom: .5em;
-  border-radius: 10px;
+    border-radius: 10px;
+    font-size: 24px;
+    background-color: #00ff00;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 12vw;
+}
+.drum {
+    margin-bottom: .5em;
+    border-radius: 10px;
     box-shadow: 2px 2px 2px 2px;
     position: relative;
     background-color: #00ff00;
@@ -60,25 +68,28 @@ button {
     cursor: pointer;
 }
 
-button:after {
+.drum:after {
     content: "";
-    background: #90EE90;
+    background: black;
     display: block;
     position: absolute;
+    padding-top: 200%;
+    padding-left: 250%;
 
-    padding-top: 300%;
-    padding-left: 350%;
     margin-left: -20px!important;
     margin-top: -120%;
     opacity: 0;
-    transition: all 0.8s
+    transition: all 0.3s
 }
 
-button:active:after {
+.drum:active:after {
     padding: 0;
     margin: 0;
     opacity: 1;
     transition: 0s
+}
+.panel {
+  margin-left: 1.1em;
 }
 #next,
 #next2 {

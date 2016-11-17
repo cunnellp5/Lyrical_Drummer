@@ -1,53 +1,61 @@
 var sounds = [{
-  id: 'snare',
+  id: '.snare',
   src: 'audio/snare.wav',
   keycode: '78'
 }, {
-  id: 'kick',
+  id: '.kick',
   src: 'audio/808.wav',
   keycode: '86'
 }, {
-  id: 'hat',
+  id: '.hat',
   src: 'audio/hat.mp3',
   keycode: '66'
 }, {
-  id: 'clap',
+  id: '.clap',
   src: 'audio/clap.wav',
   keycode: '72'
 }, {
-  id: 'crunch',
+  id: '.crunch',
   src: 'audio/crunch.wav',
   keycode: '89'
 }, {
-  id: 'guitar',
+  id: '.guitar',
   src: 'audio/guitarLoop.wav',
   keycode: '84'
 }, {
-  id: 'tom_hi',
+  id: '.tom_hi',
   src: 'audio/tom_hi.wav',
   keycode: '70'
 }, {
-  id: 'tom',
+  id: '.tom',
   src: 'audio/tom.wav',
   keycode: '71'
 }, {
-  id: 'vox.wav',
+  id: '.vox',
   src: 'audio/vox.wav',
   keycode: '82'
 }];
 //******************************************************************************
+
 // $(document).ready(function(){
-//   var audioElement = document.createElement('audio');
 //   for (var i = 0; i < sounds.length; i++) {
-//     audioElement.setAttribute('src', this.sounds[i].src);
-//     window.addEventListener("keydown", checkKeyPressed, false);
-//     function checkKeyPressed(e) {
-//         if (e.keyCode == this.sounds[i].id) {
-//             audioElement.play();
-//             audioElement.currentTime = 0;
-//         }
-//     }
+//
+//     var audioElement = document.createElement('audio');
+//     audioElement.setAttribute({
+//       'src': sounds[i].src,
+//       'id': sounds[i].id
+//   });
+//     console.log(audioElement);
+//     $(sounds[i].id).click(function() {
+//         audioElement.play()
+//         audioElement.currentTime = 0;
+//     });
+//
 //   }
+//     $('#pause').click(function() {
+//         audioElement.pause();
+//     });
+//
 // })
 
 
