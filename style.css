@@ -17,11 +17,6 @@ h4 {
 }
 p{
   padding: 1em;
-
-}
-.color {
-  background-color: #00ff00;
-  background-blend-mode: saturation;
 }
 .row {
   margin-top: 1em;
@@ -51,10 +46,19 @@ button {
     padding: 20px;
     width: 12vw;
 }
+.drum{
+  background-color: 	rgb(255,255,255);
+  -webkit-transition: 	background-color 200 ease-in-out;  /* Saf3.2+, Chrome */
+  -moz-transition: 	background-color 200 ease-in-out;  /* FF4+ */
+  -ms-transition: 	background-color 200 ease-in-out;  /* IE200*/
+  -o-transition: 		background-color 200 ease-in-out;  /* Opera 2005+ */
+  transition: 		background-colo 200 ease-in-out;
+}
 .drum {
     margin-bottom: .5em;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px 2px;
+    text-shadow:5px 5px 10px black;
+    box-shadow: 5px 5px 10px black;
     position: relative;
     background-color: #00ff00;
     border: none;
@@ -77,13 +81,11 @@ button {
     position: absolute;
     padding-top: 200%;
     padding-left: 250%;
-
     margin-left: -20px!important;
     margin-top: -120%;
     opacity: 0;
     transition: all 0.3s
 }
-
 .drum:active:after {
     padding: 0;
     margin: 0;
@@ -99,13 +101,17 @@ button {
   padding: .25em;
   background-color: purple;
   width: 20vw;
+  box-shadow: 2px 2px 5px black;
 }
 #content {
   font-size: 24px;
 }
 #pause {
+  width: 3em;
+  height: 3em;
   background-color: red;
   border-radius: 100%;
+  box-shadow: 5px 5px 10px black;
 }
 
 .carousel-inner > .item > img,

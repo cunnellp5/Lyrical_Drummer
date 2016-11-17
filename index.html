@@ -1,15 +1,12 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <title>Audio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 </head>
-
-<body id="grad">
-
+<body>
     <header>
         <nav class="navbar navbar-inverse">
             <h1 class="col-xs-6 col-xs-offset-3 text-center">DrumPad!</h1>
@@ -82,7 +79,6 @@
                                     <img src="images/rock10.png" alt="10" width="460" height="345">
                                 </div>
                             </div>
-
                             <!-- Left and right controls -->
                             <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -106,7 +102,7 @@
                 <div class="stock">
                     <div class="three">
                         <div class="circle">
-                            <button class="vox color drum" accesskey="r">R</button>
+                            <button class="vox drum" accesskey="r">R</button>
                         </div>
                         <div class="circle">
                             <button class="tom_hi drum">F</button>
@@ -120,7 +116,7 @@
             <div class="col-xs-2">
                 <div class="three">
                     <div class="circle">
-                        <button class="guitar color drum">T</button>
+                        <button class="guitar drum">T</button>
                     </div>
                     <div class="circle">
                         <button class="tom drum">G</button>
@@ -133,7 +129,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-xs-2">
                 <div class="stock">
                     <div class="three">
@@ -164,7 +159,6 @@
             <div class="col-xs-4 text-center">
                 <div>
                     <br>
-
                 </div>
             </div>
             <div class="col-xs-2">
@@ -187,12 +181,13 @@
                 </div>
             </div>
             <div class="col-xs-12 text-center" id="content2">
-
                 <div class="col-xs-12 text-center">
                     <div class="btn">
-                        <button id='next' type="button" name="button"><small>Get a word!</small></button>
+                        <button id='next' type="button" name="button"><small>1. Get a word!</small></button>
                         <br>
-                        <button id='next2' type="button" name="button"><small>Rhyme that word!</small></button>
+                        <br>
+                        <button id='next2' type="button" name="button"><small>2. Rhyme it!</small></button>
+                        <br>
                         <br>
                         <small>(Rhyme results are provided by <a href="http://rhymebrain.com">RhymeBrain.com)</a></small>
                     </div>

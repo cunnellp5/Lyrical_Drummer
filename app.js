@@ -135,3 +135,80 @@ function getRandomWord(words) {
 
 }
 //******************rhyme the given word from above*****************************
+
+timer = setInterval( function()
+{
+	var randomColor = 'rgb(' +
+ 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
+	$('.snare').css('backgroundColor', randomColor);
+}, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
+
+timer = setInterval( function()
+{
+	var randomColor = 'rgb(' +
+ 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
+	$('.kick').css('backgroundColor', randomColor);
+}, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
+
+timer = setInterval( function()
+{
+	var randomColor = 'rgb(' +
+ 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
+	$('.hat').css('backgroundColor', randomColor);
+}, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
+
+timer = setInterval( function()
+{
+	var randomColor = 'rgb(' +
+ 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
+	$('.vox').css('backgroundColor', randomColor);
+}, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
+
+timer = setInterval( function()
+{
+	var randomColor = 'rgb(' +
+ 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
+	$('.tom_hi').css('backgroundColor', randomColor);
+}, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
+timer = setInterval( function()
+{
+	var randomColor = 'rgb(' +
+ 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
+	$('.guitar').css('backgroundColor', randomColor);
+}, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
+timer = setInterval( function()
+{
+	var randomColor = 'rgb(' +
+ 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
+	$('.tom').css('backgroundColor', randomColor);
+}, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
+timer = setInterval( function()
+{
+	var randomColor = 'rgb(' +
+ 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
+	$('.crunch').css('backgroundColor', randomColor);
+}, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
+timer = setInterval( function()
+{
+	var randomColor = 'rgb(' +
+ 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
+	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
+	$('.clap').css('backgroundColor', randomColor);
+}, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
