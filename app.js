@@ -37,193 +37,190 @@ var sounds = [{
 }];
 //******************************************************************************
 
-// $(document).ready(function(){
-//   for (var i = 0; i < sounds.length; i++) {
-//
-//     var audioElement = document.createElement('audio');
-//     audioElement.setAttribute({
-//       'src': sounds[i].src,
-//       'id': sounds[i].id
-//   });
-//     console.log(audioElement);
-//     $(sounds[i].id).click(function() {
-//         audioElement.play()
-//         audioElement.currentTime = 0;
-//     });
-//
-//   }
-//     $('#pause').click(function() {
-//         audioElement.pause();
-//     });
-//
-// })
+$(document).ready(function(){
+  for (var i = 0; i < sounds.length; i++) {
 
-
-$(document).ready(function() {
     var audioElement = document.createElement('audio');
-    audioElement.setAttribute('src', sounds[8].src);
-    window.addEventListener("keydown", checkKeyPressed, false);
+    audioElement.setAttribute('src', sounds[i].src);
+    audioElement.setAttribute('id', sounds[i].id);
+    audioElement.setAttribute('keycode', sounds[i].keycode);
 
-    function checkKeyPressed(e) {
-        if (e.keyCode == "82") {
-            audioElement.play();
-            audioElement.currentTime = 0;
-        } else if (e.keyCode == "84") {
-          audioElement.pause();
-        }
-    }
-    $('.vox').click(function() {
+    $(sounds[i].id).click(function() {
         audioElement.play()
         audioElement.currentTime = 0;
     });
+  }
     $('#pause').click(function() {
         audioElement.pause();
     });
-    //******************************************************************************
-    $(document).ready(function() {
-        var audioElement = document.createElement('audio');
-        audioElement.setAttribute('src', sounds[1].src);
-        window.addEventListener("keydown", checkKeyPressed, false);
+})
 
-        function checkKeyPressed(e) {
-            if (e.keyCode == "86") {
-                audioElement.play();
-                audioElement.currentTime = 0;
-            }
-        }
-        $('.kick').click(function() {
-            audioElement.play();
-            audioElement.currentTime = 0;
-        });
-    });
-    //******************************************************************************
-    $(document).ready(function() {
-        var audioElement = document.createElement('audio');
-        audioElement.setAttribute('src', sounds[0].src);
-        window.addEventListener("keydown", checkKeyPressed, false);
-
-        function checkKeyPressed(e) {
-            if (e.keyCode == "78") {
-                audioElement.play();
-                audioElement.currentTime = 0;
-            }
-        }
-        $('.snare').click(function() {
-            audioElement.play();
-            audioElement.currentTime = 0;
-        });
-    });
-    //******************************************************************************
-    $(document).ready(function() {
-        var audioElement = document.createElement('audio');
-        audioElement.setAttribute('src', sounds[2].src);
-        window.addEventListener("keydown", checkKeyPressed, false);
-
-        function checkKeyPressed(e) {
-            if (e.keyCode == "66") {
-                audioElement.play();
-                audioElement.currentTime = 0;
-            }
-        }
-        $('.hat').click(function() {
-            audioElement.play();
-            audioElement.currentTime = 0;
-        });
-    });
-    //******************************************************************************
-    $(document).ready(function() {
-        var audioElement = document.createElement('audio');
-        audioElement.setAttribute('src', sounds[3].src);
-        window.addEventListener("keydown", checkKeyPressed, false);
-
-        function checkKeyPressed(e) {
-            if (e.keyCode == "72") {
-                audioElement.play();
-                audioElement.currentTime = 0;
-            }
-        }
-        $('.clap').click(function() {
-            audioElement.play();
-            audioElement.currentTime = 0;
-        });
-    });
-    //******************************************************************************
-    $(document).ready(function() {
-        var audioElement = document.createElement('audio');
-        audioElement.setAttribute('src', sounds[4].src);
-        window.addEventListener("keydown", checkKeyPressed, false);
-
-        function checkKeyPressed(e) {
-            if (e.keyCode == "89") {
-                audioElement.play();
-                audioElement.currentTime = 0;
-            }
-        }
-        $('.crunch').click(function() {
-            audioElement.play();
-            audioElement.currentTime = 0;
-        });
-    });
-    //******************************************************************************
-    $(document).ready(function() {
-        var audioElement = document.createElement('audio');
-        audioElement.setAttribute('src', sounds[5].src);
-        window.addEventListener("keydown", checkKeyPressed, false);
-
-        function checkKeyPressed(e) {
-            if (e.keyCode == "84") {
-                audioElement.play();
-                audioElement.currentTime = 0;
-            } else if (e.keyCode == "82") {
-              audioElement.pause();
-            }
-        }
-        $('.guitar').click(function() {
-            audioElement.play();
-            audioElement.currentTime = 0;
-
-        });
-        $('#pause').click(function() {
-            audioElement.pause();
-        });
-    });
-
-
-    //******************************************************************************
-    $(document).ready(function() {
-        var audioElement = document.createElement('audio');
-        audioElement.setAttribute('src', sounds[6].src);
-        window.addEventListener("keydown", checkKeyPressed, false);
-
-        function checkKeyPressed(e) {
-            if (e.keyCode == "70") {
-                audioElement.play();
-                audioElement.currentTime = 0;
-            }
-        }
-        $('.tom_hi').click(function() {
-            audioElement.play();
-            audioElement.currentTime = 0;
-        });
-    });
-    //******************************************************************************
-    $(document).ready(function() {
-        var audioElement = document.createElement('audio');
-        audioElement.setAttribute('src', sounds[7].src);
-        window.addEventListener("keydown", checkKeyPressed, false);
-
-        function checkKeyPressed(e) {
-            if (e.keyCode == "71") {
-                audioElement.play();
-                audioElement.currentTime = 0;
-            }
-        }
-        $('.tom').click(function() {
-            audioElement.play();
-            audioElement.currentTime = 0;
-        });
-    });
-});
+//
+//   $(document).ready(function() {
+//     var audioElement = document.createElement('audio');
+//     audioElement.setAttribute('src', sounds[8].src);
+//     window.addEventListener("keydown", checkKeyPressed, false);
+//
+//     function checkKeyPressed(e) {
+//         if (e.keyCode == "82") {
+//             audioElement.play();
+//             audioElement.currentTime = 0;
+//         } else if (e.keyCode == "84") {
+//           audioElement.pause();
+//         }
+//     }
+//     $('.vox').click(function() {
+//         audioElement.play()
+//         audioElement.currentTime = 0;
+//     });
+//     $('#pause').click(function() {
+//         audioElement.pause();
+//     });
+//     //******************************************************************************
+//     $(document).ready(function() {
+//         var audioElement = document.createElement('audio');
+//         audioElement.setAttribute('src', sounds[1].src);
+//         window.addEventListener("keydown", checkKeyPressed, false);
+//
+//         function checkKeyPressed(e) {
+//             if (e.keyCode == "86") {
+//                 audioElement.play();
+//                 audioElement.currentTime = 0;
+//             }
+//         }
+//         $('.kick').click(function() {
+//             audioElement.play();
+//             audioElement.currentTime = 0;
+//         });
+//     });
+//     //******************************************************************************
+//     $(document).ready(function() {
+//         var audioElement = document.createElement('audio');
+//         audioElement.setAttribute('src', sounds[0].src);
+//         window.addEventListener("keydown", checkKeyPressed, false);
+//
+//         function checkKeyPressed(e) {
+//             if (e.keyCode == "78") {
+//                 audioElement.play();
+//                 audioElement.currentTime = 0;
+//             }
+//         }
+//         $('.snare').click(function() {
+//             audioElement.play();
+//             audioElement.currentTime = 0;
+//         });
+//     });
+//     //******************************************************************************
+//     $(document).ready(function() {
+//         var audioElement = document.createElement('audio');
+//         audioElement.setAttribute('src', sounds[2].src);
+//         window.addEventListener("keydown", checkKeyPressed, false);
+//
+//         function checkKeyPressed(e) {
+//             if (e.keyCode == "66") {
+//                 audioElement.play();
+//                 audioElement.currentTime = 0;
+//             }
+//         }
+//         $('.hat').click(function() {
+//             audioElement.play();
+//             audioElement.currentTime = 0;
+//         });
+//     });
+//     //******************************************************************************
+//     $(document).ready(function() {
+//         var audioElement = document.createElement('audio');
+//         audioElement.setAttribute('src', sounds[3].src);
+//         window.addEventListener("keydown", checkKeyPressed, false);
+//
+//         function checkKeyPressed(e) {
+//             if (e.keyCode == "72") {
+//                 audioElement.play();
+//                 audioElement.currentTime = 0;
+//             }
+//         }
+//         $('.clap').click(function() {
+//             audioElement.play();
+//             audioElement.currentTime = 0;
+//         });
+//     });
+//     //******************************************************************************
+//     $(document).ready(function() {
+//         var audioElement = document.createElement('audio');
+//         audioElement.setAttribute('src', sounds[4].src);
+//         window.addEventListener("keydown", checkKeyPressed, false);
+//
+//         function checkKeyPressed(e) {
+//             if (e.keyCode == "89") {
+//                 audioElement.play();
+//                 audioElement.currentTime = 0;
+//             }
+//         }
+//         $('.crunch').click(function() {
+//             audioElement.play();
+//             audioElement.currentTime = 0;
+//         });
+//     });
+//     //******************************************************************************
+//     $(document).ready(function() {
+//         var audioElement = document.createElement('audio');
+//         audioElement.setAttribute('src', sounds[5].src);
+//         window.addEventListener("keydown", checkKeyPressed, false);
+//
+//         function checkKeyPressed(e) {
+//             if (e.keyCode == "84") {
+//                 audioElement.play();
+//                 audioElement.currentTime = 0;
+//             } else if (e.keyCode == "82") {
+//               audioElement.pause();
+//             }
+//         }
+//         $('.guitar').click(function() {
+//             audioElement.play();
+//             audioElement.currentTime = 0;
+//
+//         });
+//         $('#pause').click(function() {
+//             audioElement.pause();
+//         });
+//     });
+//
+//
+//     //******************************************************************************
+//     $(document).ready(function() {
+//         var audioElement = document.createElement('audio');
+//         audioElement.setAttribute('src', sounds[6].src);
+//         window.addEventListener("keydown", checkKeyPressed, false);
+//
+//         function checkKeyPressed(e) {
+//             if (e.keyCode == "70") {
+//                 audioElement.play();
+//                 audioElement.currentTime = 0;
+//             }
+//         }
+//         $('.tom_hi').click(function() {
+//             audioElement.play();
+//             audioElement.currentTime = 0;
+//         });
+//     });
+//     //******************************************************************************
+//     $(document).ready(function() {
+//         var audioElement = document.createElement('audio');
+//         audioElement.setAttribute('src', sounds[7].src);
+//         window.addEventListener("keydown", checkKeyPressed, false);
+//
+//         function checkKeyPressed(e) {
+//             if (e.keyCode == "71") {
+//                 audioElement.play();
+//                 audioElement.currentTime = 0;
+//             }
+//         }
+//         $('.tom').click(function() {
+//             audioElement.play();
+//             audioElement.currentTime = 0;
+//         });
+//     });
+// });
 //******************random words generated below********************************
 
 $(document).ready(function() {

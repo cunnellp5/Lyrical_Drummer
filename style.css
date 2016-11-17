@@ -89,7 +89,7 @@ button {
     transition: 0s
 }
 .panel {
-  margin-left: 1.1em;
+  /*margin-left: 1.1em;*/
 }
 #next,
 #next2 {
@@ -157,4 +157,12 @@ button {
   background-image: url(png/music-3.png);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+nav {
+  background-image: url(images/eq.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-y: scroll;
 }
