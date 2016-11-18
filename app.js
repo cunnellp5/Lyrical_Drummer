@@ -38,7 +38,6 @@ var sounds = [{
   isLoop: true
 }];
 //************************DRUMPAD***********************************************
-
 $(document).ready(function(){
   sounds.forEach(function(sound){
 
@@ -98,9 +97,10 @@ $(document).ready(function() {
             var rhyme = ('https://galvanize-cors.herokuapp.com/http://rhymebrain.com/talk?function=getRhymes&word=' + currentRandomWord)
 
             $.get(rhyme, function(word){
-                $('#content2').html('');
+                $('#content2').html('').fadeIn(500);
               for (var i = 0; i < 5; i++) {
                 $('#content2').append(word[i].word + " " + "<br>");
+
               }
                 $('#content3').html('');
               for (var i = 5; i < 10; i++) {

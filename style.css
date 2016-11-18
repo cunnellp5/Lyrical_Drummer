@@ -82,7 +82,7 @@ button:focus{
     font-size: 24px;
     color: #FFFFFF;
     padding: 20px;
-    width: 12vw;
+    width: 10vw;
     text-align: center;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
@@ -90,7 +90,6 @@ button:focus{
     overflow: hidden;
     cursor: pointer;
 }
-
 .drum:after {
     content: "";
     background: black;
@@ -150,7 +149,7 @@ button:focus{
   background-position: center;
 }
 .tom {
-  background-image: url(png/music-2.png);
+  background-image: url(png/tomIcon.png);
   background-repeat: no-repeat;
   background-position: center;
 }
