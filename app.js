@@ -1,6 +1,6 @@
 var sounds = [{
   class: '.snare',
-  src: 'audio/snare.wav',
+  src: 'audio/punchSnare.wav',
   keycode: '78'
 }, {
   class: '.kick',
@@ -12,7 +12,7 @@ var sounds = [{
   keycode: '66'
 }, {
   class: '.clap',
-  src: 'audio/clap.wav',
+  src: 'audio/clapMix.wav',
   keycode: '72'
 }, {
   class: '.crunch',
@@ -20,16 +20,16 @@ var sounds = [{
   keycode: '89'
 }, {
   class: '.guitar',
-  src: 'audio/guitarLoop.wav',
+  src: 'audio/guitar.wav',
   keycode: '84',
   isLoop: true
 }, {
   class: '.tom_hi',
-  src: 'audio/tom_hi.wav',
+  src: 'audio/tommy.wav',
   keycode: '70'
 }, {
   class: '.tom',
-  src: 'audio/tom.wav',
+  src: 'audio/tommy2.wav',
   keycode: '71'
 }, {
   class: '.vox',
@@ -41,7 +41,7 @@ var sounds = [{
 
 $(document).ready(function(){
   sounds.forEach(function(sound){
-console.log(sound);
+
     var audioElement = document.createElement('audio');
     audioElement.setAttribute('src', sound.src);
     audioElement.setAttribute('keycode', sound.keycode);
@@ -49,7 +49,8 @@ console.log(sound);
     window.addEventListener("keydown", checkKeyPressed, false);
     function checkKeyPressed(key) {
         if (key.keyCode == sound.keycode) {
-          playSound();
+          // playSound();
+          $(sound.class).click();
         }
     }
     function playSound (){
@@ -72,9 +73,7 @@ console.log(sound);
         })
     });
 })
-
 //******************random words generated below********************************
-
 $(document).ready(function() {
   var currentRandomWord = ''
     $.getJSON('https://galvanize-cors.herokuapp.com/http://hipsterjesus.com/api/', function(data) {
@@ -97,7 +96,7 @@ $(document).ready(function() {
         });
         $("#next2").click(function() {
             var rhyme = ('https://galvanize-cors.herokuapp.com/http://rhymebrain.com/talk?function=getRhymes&word=' + currentRandomWord)
-            console.log(rhyme);
+
             $.get(rhyme, function(word){
                 $('#content2').html('');
               for (var i = 0; i < 5; i++) {
