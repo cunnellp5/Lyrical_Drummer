@@ -97,22 +97,21 @@ $(document).ready(function() {
             var rhyme = ('https://galvanize-cors.herokuapp.com/http://rhymebrain.com/talk?function=getRhymes&word=' + currentRandomWord)
 
             $.get(rhyme, function(word){
-                $('#content2').html('').fadeIn(500);
+                $('#content2').html('');
               for (var i = 0; i < 5; i++) {
-                $('#content2').append(word[i].word + " " + "<br>");
-
+                $('#content2').append(word[i].word + " " + "<br>").css('border-radius','90%');
               }
                 $('#content3').html('');
               for (var i = 5; i < 10; i++) {
-                $('#content3').append(word[i].word + " " + "<br>");
+                $('#content3').append(word[i].word + " " + "<br>").css('border-radius','90%');
               }
                 $('#content4').html('');
               for (var i = 10; i < 15; i++) {
-                $('#content4').append(word[i].word + " " + "<br>");
+                $('#content4').append(word[i].word + " " + "<br>").css('border-radius','90%');
               }
                 $('#content5').html('');
               for (var i = 15; i < 20; i++) {
-                $('#content5').append(word[i].word + " " + "<br>");
+                $('#content5').append(word[i].word + " " + "<br>").css('border-radius','90%');
               }
             })
         })
@@ -135,6 +134,7 @@ timer = setInterval( function()
 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
 	$('.snare').css('backgroundColor', randomColor);
+  // $('#content2').css('backgroundColor', randomColor);
 }, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
 timer = setInterval( function()
 {
@@ -143,6 +143,7 @@ timer = setInterval( function()
 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
 	$('.kick').css('backgroundColor', randomColor);
+  // $('#content3').css('backgroundColor', randomColor);
 }, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
 timer = setInterval( function()
 {
@@ -151,6 +152,7 @@ timer = setInterval( function()
 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
 	$('.hat').css('backgroundColor', randomColor);
+  // $('#content4').css('backgroundColor', randomColor);
 }, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
 timer = setInterval( function()
 {
@@ -159,6 +161,7 @@ timer = setInterval( function()
 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ',' +
 	(Math.floor(Math.random() * ((256-30)+1) + 30)) + ')';
 	$('.vox').css('backgroundColor', randomColor);
+  // $('#content5').css('backgroundColor', randomColor);
 }, Math.floor(Math.random() * ((2500-1500)+1) + 1500));
 timer = setInterval( function()
 {
